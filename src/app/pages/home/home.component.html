@@ -1,28 +1,14 @@
 <app-menu-title></app-menu-title>
 <div class="container__articles">
   <div class="articles__main">
-    <app-big-card
-      id="1"
-      cardPhoto="https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg"
-      cardTitle="Saiu a nova versão do Angular!"
-      cardDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestias sapiente impedit, aliquid quas ipsum dolore labore doloremque, mollitia quasi recusandae, ipsam adipisci facilis! Cum quaerat optio natus voluptatem eaque."
-    ></app-big-card>
+    <app-big-card></app-big-card>
   </div>
   <div class="articles__others">
     <app-small-card
-      id="2"
-      cardPhoto="https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg"
-      cardTitle="Saiu a nova versão do Angular"
-    ></app-small-card>
-    <app-small-card
-      id="3"
-      cardPhoto="https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg"
-      cardTitle="Saiu a nova versão do Angular"
-    ></app-small-card>
-    <app-small-card
-      id="4"
-      cardPhoto="https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg"
-      cardTitle="Saiu a nova versão do Angular"
+      *ngFor="let news of newsData | slice:1; "
+      id="{{news.id}}"
+      cardPhoto="{{news.photo}}"
+      cardTitle="{{news.title}}"
     ></app-small-card>
   </div>
 </div>
